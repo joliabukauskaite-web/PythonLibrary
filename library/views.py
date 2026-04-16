@@ -2,5 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, template_name='index.html')
+    context = {
+        'zmones': ['Tomas', 'Rokas', 'Ona'],
+    }
+    return render(request, template_name='index.html', context=context)
 
